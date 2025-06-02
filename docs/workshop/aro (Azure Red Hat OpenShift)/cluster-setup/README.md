@@ -52,8 +52,14 @@ The subsequent steps can be followed from within the container.
 
 A sample command on Linux AMD64 is
 ```bash
+cd /tp-helm-charts/docs/workshop/
 docker buildx build --platform="linux/amd64" --progress=plain -t workshop-cli-tools:latest --load .
 ```
+
+To run this container: 
+docker run -it --rm workshop-cli-tools:latest /bin/bash
+
+
 
 ## Recommended Roles and Permissions
 You will need Contributor and User Access Administrator permissions or Owner permissions, either directly on the virtual network or on the resource group or subscription containing it.
@@ -81,19 +87,19 @@ Please set/adjust the values of the variables as expected.
 export TP_SUBSCRIPTION_ID=$(az account show --query id -o tsv) # subscription id
 export TP_TENANT_ID=$(az account show --query tenantId -o tsv) # tenant id
 export TP_AZURE_REGION="eastus" # region of resource group
-export TP_RESOURCE_GROUP="openshift-azure"
+export TP_RESOURCE_GROUP="kul-atsbnl-flogo-azfunc"
 
 ## Cluster configuration specific variables
-export TP_CLUSTER_NAME="aroCluster"
+export TP_CLUSTER_NAME="aroRotterdamCluster"
 export TP_WORKER_COUNT=6
 
 ## Network specific variables
-export TP_VNET_NAME="openshiftvnet"
-export TP_MASTER_SUBNET_NAME="masterOpenshiftSubnet"
-export TP_WORKER_SUBNET_NAME="workerOpenshiftSubnet"
+export TP_VNET_NAME="openshiftRotterdamvnet"
+export TP_MASTER_SUBNET_NAME="masterOpenshiftRotterdamSubnet"
+export TP_WORKER_SUBNET_NAME="workerOpenshiftRotterdamSubnet"
 export TP_VNET_CIDR="10.0.0.0/8"
-export TP_MASTER_SUBNET_CIDR="10.0.0.0/23"
-export TP_WORKER_SUBNET_CIDR="10.0.2.0/23"
+export TP_MASTER_SUBNET_CIDR="10.17.0.0/23"
+export TP_WORKER_SUBNET_CIDR="10.17.2.0/23"
 
 ## Worker Nodes specific configuration
 export TP_WORKER_VM_SIZE="Standard_D8s_v5"
