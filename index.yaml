@@ -1,0 +1,44 @@
+apiVersion: v1
+entries:
+  oauth2-proxy:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: securityContext and timeout of the initContainer wait-for-redis configurable via values.
+          links:
+            - name: Github PR
+              url: https://github.com/oauth2-proxy/manifests/pull/159
+    apiVersion: v2
+    appVersion: 1.7.0
+    created: "2025-06-03T15:38:29.394462449Z"
+    description: A reverse proxy that provides authentication with Google, Github
+      or other providers
+    digest: c2e08c25255a0f26bb91c5bf6e9f0da91ae1677523d960c0fc1c01c246f09658
+    home: https://oauth2-proxy.github.io/oauth2-proxy/
+    keywords:
+    - kubernetes
+    - oauth
+    - oauth2
+    - authentication
+    - google
+    - github
+    - redis
+    kubeVersion: '>=1.9.0-0'
+    maintainers:
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    - name: tlawrie
+    - email: nicholas.meves@gmail.com
+      name: NickMeves
+    - email: joel.speed@hotmail.co.uk
+      name: JoelSpeed
+    - email: pierluigi.lenoci@gmail.com
+      name: pierluigilenoci
+    name: oauth2-proxy
+    sources:
+    - https://github.com/oauth2-proxy/oauth2-proxy
+    - https://github.com/oauth2-proxy/manifests
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/oauth2-proxy-10.2.12/oauth2-proxy-10.2.12.tgz
+    version: 10.2.12
+generated: "2025-06-03T15:38:29.394472649Z"
