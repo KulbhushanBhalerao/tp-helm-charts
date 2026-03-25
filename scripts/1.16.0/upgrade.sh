@@ -1,19 +1,13 @@
 #!/bin/bash
 #
-# Copyright (c) 2025 TIBCO Software Inc.
+# Copyright (c) 2026 TIBCO Software Inc.
 # All Rights Reserved. Confidential & Proprietary.
 #
-# TEMPLATE: TIBCO Control Plane Upgrade Script
-# 
-# This template is for upgrades using the tibco-cp-base chart.
-# For upgrades from version 1.13.0 onwards.
+# Tested with: GNU bash, version 5.2.21(1)-release
 #
-# Instructions:
-# 1. Copy this file to scripts/<version>/upgrade.sh
-# 2. Update FROM_VERSION and TO_VERSION
-# 3. Implement version-specific logic in process_files()
-# 4. Update show_usage() if needed
-# 5. Test thoroughly
+# TIBCO Control Plane Helm Values Generation Script for Platform Upgrade FROM 1.15.0 TO 1.16.0
+# Works with the unified tibco-cp-base chart (single chart deployment)
+
 #
 
 # ============================================================================
@@ -31,8 +25,8 @@ init_common_variables
 # ============================================================================
 
 # Version configuration
-FROM_VERSION="${FROM_VERSION:-1.X.0}"  # TODO: Update this (must be 1.13.0+) - supports env override
-TO_VERSION="1.Y.0"    # TODO: Update this
+FROM_VERSION="${FROM_VERSION:-1.15.0}"  # TODO: Update this (must be 1.13.0+)
+TO_VERSION="1.16.0"    # TODO: Update this
 DEFAULT_VERSION="${TO_VERSION}"
 
 # Dependency requirements
@@ -256,23 +250,62 @@ process_files() {
     validate_file "${CONTROL_PLANE_FILE}" "Control plane values file" || exit 1
     
     # ========================================================================
-    # TODO: Implement version-specific transformation logic here
+    # Version-specific transformation logic for 1.15.0 to 1.16.0
     # ========================================================================
     
-    # Example: Start with current values as base
+    # Start with current values as base
     cp "${CONTROL_PLANE_FILE}" "${CONTROL_PLANE_OUTPUT_FILE}"
     
-    # Example: Apply version-specific transformations using yq
-    # yq eval '.some.new.config = "value"' -i "${CONTROL_PLANE_OUTPUT_FILE}"
-    # yq eval 'del(.deprecated.section)' -i "${CONTROL_PLANE_OUTPUT_FILE}"
+    print_info "Removing deprecated flags and sections for 1.16.0..."
     
-    # Example: Merge new configurations
-    # if [[ -f "${TEMP_DIR}/new-config.yaml" ]]; then
-    #     yq eval-all 'select(fileIndex == 0) * select(fileIndex == 1)' \
-    #         "${CONTROL_PLANE_OUTPUT_FILE}" \
-    #         "${TEMP_DIR}/new-config.yaml" > "${CONTROL_PLANE_OUTPUT_FILE}.tmp"
-    #     mv "${CONTROL_PLANE_OUTPUT_FILE}.tmp" "${CONTROL_PLANE_OUTPUT_FILE}"
-    # fi
+    # Remove tp-cp-prometheus.enabled flag
+    yq eval 'del(.tp-cp-prometheus.enabled)' -i "${CONTROL_PLANE_OUTPUT_FILE}"
+    
+    # Remove tp-cp-o11y.enabled flag  
+    yq eval 'del(.tp-cp-o11y.enabled)' -i "${CONTROL_PLANE_OUTPUT_FILE}"
+    
+    # Remove tp-cp-auditsafe.enabled flag
+    yq eval 'del(.tp-cp-auditsafe.enabled)' -i "${CONTROL_PLANE_OUTPUT_FILE}"
+    
+    # Remove hybrid-proxy.enabled flag
+    yq eval 'del(.hybrid-proxy.enabled)' -i "${CONTROL_PLANE_OUTPUT_FILE}"
+    
+    # Remove resource-set-operator.enabled flag
+    yq eval 'del(.resource-set-operator.enabled)' -i "${CONTROL_PLANE_OUTPUT_FILE}"
+    
+    # Remove entire tp-dp-proxy section
+    yq eval 'del(.tp-dp-proxy)' -i "${CONTROL_PLANE_OUTPUT_FILE}"
+    
+    # Remove router-operator.enabled flag
+    yq eval 'del(.router-operator.enabled)' -i "${CONTROL_PLANE_OUTPUT_FILE}"
+    
+    # Remove entire tp-cp-prometheus section
+    yq eval 'del(.tp-cp-prometheus)' -i "${CONTROL_PLANE_OUTPUT_FILE}"
+    
+    # Remove db_ssl_root_cert flag under global.external
+    yq eval 'del(.global.external.db_ssl_root_cert)' -i "${CONTROL_PLANE_OUTPUT_FILE}"
+    
+    # Remove entire proxy section (httpProxy, httpsProxy, noProxy)
+    yq eval 'del(.global.tibco.proxy)' -i "${CONTROL_PLANE_OUTPUT_FILE}"
+    
+    # Remove rbac section under global.tibco if present
+    yq eval 'del(.global.tibco.rbac)' -i "${CONTROL_PLANE_OUTPUT_FILE}"
+    
+    # Remove deprecated logging configuration
+    yq eval 'del(.global.tibco.logging.fluentbit.image.name)' -i "${CONTROL_PLANE_OUTPUT_FILE}"
+    yq eval 'del(.global.tibco.logging.fluentbit.image.pullPolicy)' -i "${CONTROL_PLANE_OUTPUT_FILE}"
+    yq eval 'del(.global.tibco.logging.fluentbit.image.registry)' -i "${CONTROL_PLANE_OUTPUT_FILE}"
+    yq eval 'del(.global.tibco.logging.fluentbit.image.repo)' -i "${CONTROL_PLANE_OUTPUT_FILE}"
+    yq eval 'del(.global.tibco.logging.repository)' -i "${CONTROL_PLANE_OUTPUT_FILE}"
+    
+    # Remove deprecated tp-cp-infra configuration
+    yq eval 'del(.tp-cp-infra.enabled)' -i "${CONTROL_PLANE_OUTPUT_FILE}"
+    yq eval 'del(.tp-cp-infra.dpMetadata)' -i "${CONTROL_PLANE_OUTPUT_FILE}"
+    
+    # Remove deprecated finops configuration
+    yq eval 'del(.global.tibco.finops)' -i "${CONTROL_PLANE_OUTPUT_FILE}"
+    
+    print_success "Deprecated flags and sections removed successfully"
     
     print_success "Processing completed successfully"
     
@@ -307,13 +340,15 @@ perform_helm_upgrade() {
     print_info "Starting Helm upgrade process"
     print_separator
     
-    # Validate current deployment
+    # Validate current deployment version with retry logic
     print_info "Validating current deployment version..."
     validate_helm_release_for_upgrade \
         "${CONTROL_PLANE_RELEASE_NAME}" \
         "${NAMESPACE}" \
         "${FROM_VERSION}" \
-        "deployed" || return 1
+        "deployed" \
+        "${TO_VERSION}" \
+        "true" || return 1
     
     # Update Helm repository
     print_info "Updating Helm charts repository..."
