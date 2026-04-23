@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   artifactmanager:
   - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:41:59.585855805Z"
+    description: A Helm chart for Artifact Manager
+    digest: a320adf695899efaccc820f2ebcb3687a75b5f03f62151e42cb09a5003cf11d0
+    name: artifactmanager
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/artifactmanager-1.16.0/artifactmanager-1.16.0.tgz
+    version: 1.16.0
+  - apiVersion: v2
     appVersion: 1.15.0
     created: "2026-02-27T10:37:56.723265631Z"
     description: A Helm chart for Artifact Manager
@@ -38,6 +47,20 @@ entries:
     - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/artifactmanager-1.8.0/artifactmanager-1.8.0.tgz
     version: 1.8.0
   bw5provisioner:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:41:59.748259048Z"
+    description: TIBCO Platform Dataplane Capabilty -- BW5 Provisioner
+    digest: d6571e0a9d8c3292706f878b96c84fea32e79bc68eafb8607658300783800b45
+    home: https://github.com/tibco/tp-iapp-bw5-provisioner.git
+    icon: https://pbs.twimg.com/profile_images/1064638558110007296/K6HqaXwh_400x400.jpg
+    maintainers:
+    - email: compute-dev@tibco.com
+      name: TIBCO Platform Dev Team
+    name: bw5provisioner
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/bw5provisioner-1.16.2/bw5provisioner-1.16.2.tgz
+    version: 1.16.2
   - apiVersion: v2
     appVersion: 1.15.0
     created: "2026-02-27T10:37:56.965057707Z"
@@ -96,6 +119,20 @@ entries:
     version: 1.10.1
   bwprovisioner:
   - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:41:59.902809665Z"
+    description: TIBCO Platform Dataplane Capabilty -- BW Provisioner
+    digest: 280ca0c28a8986affba0456e202b9beb4a464ae0f800c4d3ffef5ec32938a0bd
+    home: https://github.com/tibco/tp-iapp-bw-provisioner.git
+    icon: https://pbs.twimg.com/profile_images/1064638558110007296/K6HqaXwh_400x400.jpg
+    maintainers:
+    - email: compute-dev@tibco.com
+      name: TIBCO Platform Dev Team
+    name: bwprovisioner
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/bwprovisioner-1.16.2/bwprovisioner-1.16.2.tgz
+    version: 1.16.2
+  - apiVersion: v2
     appVersion: 1.15.0
     created: "2026-02-27T10:37:57.139740338Z"
     description: TIBCO Platform Dataplane Capabilty -- BW Provisioner
@@ -152,6 +189,20 @@ entries:
     - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/bwprovisioner-1.10.1/bwprovisioner-1.10.1.tgz
     version: 1.10.1
   dp-bw-adapter:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:00.030833053Z"
+    description: TIBCO Platform Bare-metal Dataplane Capabilty -- BW Adapter
+    digest: 46152a7198b4c0c187a740bfc0ca7c9fcd4a3e3b26cfda74ca751f77a1bd68f3
+    home: https://github.com/tibco/tp-iapp-bw-adapter.git
+    icon: https://pbs.twimg.com/profile_images/1064638558110007296/K6HqaXwh_400x400.jpg
+    maintainers:
+    - email: compute-dev@tibco.com
+      name: TIBCO Platform Dev Team
+    name: dp-bw-adapter
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/dp-bw-adapter-1.16.1/dp-bw-adapter-1.16.1.tgz
+    version: 1.16.1
   - apiVersion: v2
     appVersion: 1.15.0
     created: "2026-02-27T10:37:57.292665513Z"
@@ -210,6 +261,16 @@ entries:
     version: 1.9.1
   dp-bw5ce-app:
   - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:00.171402415Z"
+    description: A Helm chart for BW5 Containers application
+    digest: 928ce4824755230fab7bc927f49c9e5d256ac1558b5e3c59667c35d183054f70
+    name: dp-bw5ce-app
+    type: application
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/dp-bw5ce-app-1.16.1/dp-bw5ce-app-1.16.1.tgz
+    version: 1.16.1
+  - apiVersion: v2
     appVersion: 1.15.0
     created: "2026-02-27T10:37:57.443687918Z"
     description: A Helm chart for BW5 Containers application
@@ -250,6 +311,16 @@ entries:
     - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/dp-bw5ce-app-1.10.2/dp-bw5ce-app-1.10.2.tgz
     version: 1.10.2
   dp-bwce-app:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:00.35219884Z"
+    description: A Helm chart for BWCE application
+    digest: e4fa999ad80d188008f0a7a39e8d57aa1b9fe336d8fb55a67670b88c2eeb6fb6
+    name: dp-bwce-app
+    type: application
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/dp-bwce-app-1.16.1/dp-bwce-app-1.16.1.tgz
+    version: 1.16.1
   - apiVersion: v2
     appVersion: 1.15.0
     created: "2026-02-27T10:37:57.634927493Z"
@@ -292,6 +363,15 @@ entries:
     version: 1.10.1
   dp-bwce-mon:
   - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:00.523799734Z"
+    description: TIBCO Platform Dataplane Capabilty -- BWCE Monitoring
+    digest: 2519f3ccc91341c5b1b33ecb4727bc249bf9127db23cbedffa46800f63d5c867
+    name: dp-bwce-mon
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/dp-bwce-mon-1.16.1/dp-bwce-mon-1.16.1.tgz
+    version: 1.16.1
+  - apiVersion: v2
     appVersion: 1.15.0
     created: "2026-02-27T10:37:57.811270626Z"
     description: TIBCO Platform Dataplane Capabilty -- BWCE Monitoring
@@ -328,6 +408,49 @@ entries:
     - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/dp-bwce-mon-1.10.1/dp-bwce-mon-1.10.1.tgz
     version: 1.10.1
   dp-config-aks:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: "Added kong"
+    apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:00.739306195Z"
+    dependencies:
+    - condition: traefik.enabled
+      name: traefik
+      repository: https://traefik.github.io/charts
+      version: 39.0.2
+    - condition: ingress-nginx.enabled
+      name: ingress-nginx
+      repository: https://kubernetes.github.io/ingress-nginx
+      version: 4.11.5
+    - condition: kong.enabled
+      name: kong
+      repository: https://charts.konghq.com
+      version: 2.33.3
+    - condition: nginx-gateway-fabric.enabled
+      name: nginx-gateway-fabric
+      repository: oci://ghcr.io/nginx/charts
+      version: 2.3.0
+    - condition: haproxy.enabled
+      name: kubernetes-ingress
+      repository: https://haproxytech.github.io/helm-charts
+      version: 1.47.3
+    - condition: istio-base.enabled
+      name: base
+      repository: https://istio-release.storage.googleapis.com/charts
+      version: 1.28.2
+    - condition: istiod.enabled
+      name: istiod
+      repository: https://istio-release.storage.googleapis.com/charts
+      version: 1.28.2
+    description: A Helm chart to configure TIBCO Dataplane on AZURE
+    digest: b2408efa7fabff4828ac5f8c56307b588387010c2d2afa67e16b70115748f4f1
+    name: dp-config-aks
+    type: application
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/dp-config-aks-1.16.2/dp-config-aks-1.16.2.tgz
+    version: 1.16.2
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -372,6 +495,57 @@ entries:
     - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/dp-config-aks-1.15.0/dp-config-aks-1.15.0.tgz
     version: 1.15.0
   dp-config-aws:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: "added crossplane charts"
+    apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:00.975500086Z"
+    dependencies:
+    - condition: traefik.enabled
+      name: traefik
+      repository: https://traefik.github.io/charts
+      version: 39.0.2
+    - condition: ingress-nginx.enabled
+      name: ingress-nginx
+      repository: https://kubernetes.github.io/ingress-nginx
+      version: 4.12.1
+    - condition: kong.enabled
+      name: kong
+      repository: https://charts.konghq.com
+      version: 2.33.3
+    - condition: nginx-gateway-fabric.enabled
+      name: nginx-gateway-fabric
+      repository: oci://ghcr.io/nginx/charts
+      version: 2.3.0
+    - condition: haproxy.enabled
+      name: kubernetes-ingress
+      repository: https://haproxytech.github.io/helm-charts
+      version: 1.47.3
+    - condition: istio-base.enabled
+      name: base
+      repository: https://istio-release.storage.googleapis.com/charts
+      version: 1.28.2
+    - condition: istiod.enabled
+      name: istiod
+      repository: https://istio-release.storage.googleapis.com/charts
+      version: 1.28.2
+    - condition: crossplane.enabled
+      name: crossplane
+      repository: https://charts.crossplane.io/stable
+      version: v1.13.2
+    - condition: crossplane-components.enabled
+      name: crossplane-components
+      repository: file://charts/crossplane-components
+      version: 1.16.*
+    description: Helm chart to configure pre-requisites on AWS
+    digest: 4678ec869904366b567e34e0de091ebc1615a7dbf5028ee61d757d7cfd338625
+    name: dp-config-aws
+    type: application
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/dp-config-aws-1.16.6/dp-config-aws-1.16.6.tgz
+    version: 1.16.6
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -526,6 +700,26 @@ entries:
     version: 1.16.0
   dp-configure-namespace:
   - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:01.201213835Z"
+    dependencies:
+    - condition: config.enabled
+      name: config
+      repository: ""
+      version: 1.9.*
+    - condition: haproxy.enabled
+      name: haproxy
+      repository: ""
+      version: 1.46.3
+    description: A Helm chart for creating service account, cluster-role, cluster-role-binding,
+      role-binding & network-policies
+    digest: b2e388cfb8b5c0c83a37ce44abd615dce3243e2b29bb74f1acb61f58fa56cdfe
+    name: dp-configure-namespace
+    type: application
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/dp-configure-namespace-1.16.0/dp-configure-namespace-1.16.0.tgz
+    version: 1.16.0
+  - apiVersion: v2
     appVersion: 1.15.0
     created: "2026-02-27T10:37:58.968614795Z"
     dependencies:
@@ -607,6 +801,25 @@ entries:
     version: 1.10.4
   dp-core-infrastructure:
   - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:01.36747304Z"
+    dependencies:
+    - condition: global.tibco.hybridConnectivity.enabled
+      name: tp-tibtunnel
+      repository: ""
+      version: 1.16.*
+    - condition: tp-provisioner-agent.enabled
+      name: tp-provisioner-agent
+      repository: ""
+      version: 1.16.*
+    description: A Helm chart for Data Plane Infrastructure
+    digest: 0a39341e9d87e2f8d4d950a513bbca3718e97df349f29922bfdcf1aa80371c34
+    name: dp-core-infrastructure
+    type: application
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/dp-core-infrastructure-1.16.4/dp-core-infrastructure-1.16.4.tgz
+    version: 1.16.4
+  - apiVersion: v2
     appVersion: 1.15.0
     created: "2026-02-27T10:37:59.193317288Z"
     dependencies:
@@ -684,6 +897,16 @@ entries:
     version: 1.10.3
   dp-flogo-app:
   - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:01.543360627Z"
+    description: Helm chart for Flogo application
+    digest: 852a002b10f9ba4db97acce82ae93fff3d8af6ae9173f2d4733f69372c86166a
+    name: dp-flogo-app
+    type: application
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/dp-flogo-app-1.16.8/dp-flogo-app-1.16.8.tgz
+    version: 1.16.8
+  - apiVersion: v2
     appVersion: 1.15.0
     created: "2026-02-27T10:37:59.376736852Z"
     description: Helm chart for Flogo application
@@ -724,6 +947,20 @@ entries:
     - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/dp-flogo-app-1.9.2/dp-flogo-app-1.9.2.tgz
     version: 1.9.2
   flogoprovisioner:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:01.698427489Z"
+    description: TIBCO Platform Dataplane Capabilty -- Flogo Provisioner
+    digest: 5199392e611e672521015edb4fa3df2f524c186768f503dcb50b93a3db559773
+    home: https://github.com/tibco/tp-iapp-flogo-provisioner.git
+    icon: https://pbs.twimg.com/profile_images/1064638558110007296/K6HqaXwh_400x400.jpg
+    maintainers:
+    - email: compute-dev@tibco.com
+      name: TIBCO Platform Dev Team
+    name: flogoprovisioner
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/flogoprovisioner-1.16.7/flogoprovisioner-1.16.7.tgz
+    version: 1.16.7
   - apiVersion: v2
     appVersion: 1.15.0
     created: "2026-02-27T10:37:59.541000133Z"
@@ -955,6 +1192,15 @@ entries:
     - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/msg-pulsar-tp-1.9.28/msg-pulsar-tp-1.9.28.tgz
     version: 1.9.28
   o11yservice:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:01.923515412Z"
+    description: A helm chart for o11y service
+    digest: c9d336c2ed507ded7ddf6db8ce01e13c7007006565c8bd8bd23f032941919de3
+    name: o11yservice
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/o11yservice-1.16.10/o11yservice-1.16.10.tgz
+    version: 1.16.10
   - apiVersion: v2
     appVersion: 1.15.0
     created: "2026-02-27T10:38:00.106626991Z"
@@ -1472,6 +1718,31 @@ entries:
       app.helm.sh/component: control-plane
       app.helm.sh/name: tibco-cp-addon-eventprocessing
     apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:02.079579152Z"
+    dependencies:
+    - condition: tp-cp-eventprocessing-be.enabled
+      name: tp-cp-eventprocessing-be
+      repository: ""
+      tags:
+      - be
+      version: 1.16.*
+    description: TIBCO Platform chart for BE addon
+    digest: 0434c4d3df491f20853607a09a7e6cb99e2139a7d49f960c76fac5db615e8cc1
+    keywords:
+    - tibco-platform
+    - platform
+    - eventprocessing
+    - addon
+    name: tibco-cp-addon-eventprocessing
+    type: application
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/tibco-cp-addon-eventprocessing-1.16.0/tibco-cp-addon-eventprocessing-1.16.0.tgz
+    version: 1.16.0
+  - annotations:
+      app.helm.sh/component: control-plane
+      app.helm.sh/name: tibco-cp-addon-eventprocessing
+    apiVersion: v2
     appVersion: 1.15.0
     created: "2026-03-10T10:29:23.986169666Z"
     dependencies:
@@ -1519,6 +1790,75 @@ entries:
     - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/tibco-cp-addon-eventprocessing-1.12.0/tibco-cp-addon-eventprocessing-1.12.0.tgz
     version: 1.12.0
   tibco-cp-base:
+  - annotations:
+      app.helm.sh/component: control-plane
+      app.helm.sh/name: tibco-cp-base
+    apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:02.268149227Z"
+    dependencies:
+    - name: tp-cp-infra
+      repository: ""
+      version: 1.16.*
+    - condition: global.tibco.hybridConnectivity.enabled
+      name: hybrid-proxy
+      repository: ""
+      version: 1.16.*
+    - condition: global.tibco.hybridConnectivity.enabled
+      name: resource-set-operator
+      repository: ""
+      version: 1.16.*
+    - name: router-operator
+      repository: ""
+      version: 1.16.*
+    - condition: otel-collector.enabled
+      name: otel-collector
+      repository: ""
+      version: 0.116.*
+    - name: tp-cp-configuration
+      repository: ""
+      version: 1.16.*
+    - name: tp-cp-core
+      repository: ""
+      version: 1.16.*
+    - name: tp-cp-core-finops
+      repository: ""
+      version: 1.16.*
+    - condition: tp-cp-o11y.enabled
+      name: tp-cp-o11y
+      repository: ""
+      version: 1.16.*
+    - condition: tp-cp-integration-common.enabled
+      name: tp-cp-integration-common
+      repository: ""
+      version: 1.16.*
+    - condition: tp-cp-cli.enabled
+      name: tp-cp-cli
+      repository: ""
+      version: 1.7.*
+    - name: tp-cp-alertmanager
+      repository: ""
+      version: 1.16.*
+    - name: tp-cp-prometheus
+      repository: ""
+      version: 1.16.*
+    - name: tp-cp-auditsafe
+      repository: ""
+      version: 1.16.*
+    - name: tp-dp-proxy
+      repository: ""
+      version: 1.16.*
+    description: TIBCO Platform base chart
+    digest: a23b5788fb0432a8731db241ff3a3555ba6d12143f829240e4af6d38558be800
+    keywords:
+    - tibco-platform
+    - platform
+    - base
+    name: tibco-cp-base
+    type: application
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/tibco-cp-base-1.16.0/tibco-cp-base-1.16.0.tgz
+    version: 1.16.0
   - annotations:
       app.helm.sh/component: control-plane
       app.helm.sh/name: tibco-cp-base
@@ -1663,6 +2003,32 @@ entries:
     version: 1.14.0
   tibco-cp-bw:
   - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:02.452385352Z"
+    dependencies:
+    - condition: bw-recipes.enabled
+      name: bw-recipes
+      repository: ""
+      version: 1.16.*
+    - condition: bw-webserver.enabled
+      name: bw-webserver
+      repository: ""
+      version: 1.16.*
+    - condition: bwce-utilities.enabled
+      name: bwce-utilities
+      repository: ""
+      version: 1.16.*
+    - condition: bw5ce-utilities.enabled
+      name: bw5ce-utilities
+      repository: ""
+      version: 1.16.*
+    description: TIBCO Controlplane chart for BW Capability
+    digest: 257f5ff2650cc19794fd70baff7b6aa2bb24ff91d57bce119f68135e301141c1
+    name: tibco-cp-bw
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/tibco-cp-bw-1.16.0/tibco-cp-bw-1.16.0.tgz
+    version: 1.16.0
+  - apiVersion: v2
     appVersion: 1.15.0
     created: "2026-03-10T10:29:24.336835708Z"
     dependencies:
@@ -1742,6 +2108,24 @@ entries:
     version: 1.14.0
   tibco-cp-devhub:
   - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:02.610513415Z"
+    dependencies:
+    - condition: tibcohub-recipes.enabled
+      name: tibcohub-recipes
+      repository: ""
+      version: 1.16.*
+    - condition: tibcohub-contrib.enabled
+      name: tibcohub-contrib
+      repository: ""
+      version: 1.16.*
+    description: TIBCO Platform base for Developer Hub Capability
+    digest: 9e19f50f1ea6c835f2db608dbfe7c8279d3b72a2f93ea5864fcf0c1baf95bb94
+    name: tibco-cp-devhub
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/tibco-cp-devhub-1.16.0/tibco-cp-devhub-1.16.0.tgz
+    version: 1.16.0
+  - apiVersion: v2
     appVersion: 1.15.0
     created: "2026-03-10T10:29:24.458493886Z"
     dependencies:
@@ -1778,6 +2162,28 @@ entries:
     - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/tibco-cp-devhub-1.14.0/tibco-cp-devhub-1.14.0.tgz
     version: 1.14.0
   tibco-cp-flogo:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:02.741586483Z"
+    dependencies:
+    - condition: flogo-recipes.enabled
+      name: flogo-recipes
+      repository: ""
+      version: 1.16.*
+    - condition: flogo-webserver.enabled
+      name: flogo-webserver
+      repository: ""
+      version: 1.16.*
+    - condition: flogo-utilities.enabled
+      name: flogo-utilities
+      repository: ""
+      version: 1.16.*
+    description: TIBCO Controlplane chart for FLOGO Capability
+    digest: d92b6b210f1902eeb4bea9517a99aa129f39ac5fd193ae0cddbda4e631b0f944
+    name: tibco-cp-flogo
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/tibco-cp-flogo-1.16.0/tibco-cp-flogo-1.16.0.tgz
+    version: 1.16.0
   - apiVersion: v2
     appVersion: 1.15.0
     created: "2026-03-10T10:29:24.616791373Z"
@@ -1845,6 +2251,27 @@ entries:
     - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/tibco-cp-flogo-1.14.0/tibco-cp-flogo-1.14.0.tgz
     version: 1.14.0
   tibco-cp-hawk:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:02.910247666Z"
+    dependencies:
+    - condition: tp-cp-hawk-infra-querynode.enabled
+      name: tp-cp-hawk-infra-querynode
+      repository: ""
+      version: 1.16.6
+    description: TIBCO Platform Control Plane - Hawk Infra Bundle
+    digest: 194a017a55c570518ce0b8626ed626d18bac07d8999e87ed1aedf6c670e4cddd
+    icon: https://pbs.twimg.com/profile_images/1064638558110007296/K6HqaXwh_400x400.jpg
+    keywords:
+    - tibco-platform
+    - control-plane
+    - hawk
+    maintainers:
+    - name: TIBCO Cloud Hawk Team
+    name: tibco-cp-hawk
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/tibco-cp-hawk-1.16.6/tibco-cp-hawk-1.16.6.tgz
+    version: 1.16.6
   - apiVersion: v2
     appVersion: 1.15.0
     created: "2026-02-27T10:38:00.851072509Z"
@@ -1961,6 +2388,26 @@ entries:
     - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/tibco-cp-messaging-1.11.15/tibco-cp-messaging-1.11.15.tgz
     version: 1.11.15
   tibco-developer-hub:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:03.085366356Z"
+    dependencies:
+    - name: common
+      repository: ""
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: ""
+      version: 11.x.x
+    description: A Helm chart for TIBCO® Developer Hub
+    digest: e8b71ec2af969dde954a3e8eb8dfc73db95566df095b1ebbfaef21bc20dd4d06
+    name: tibco-developer-hub
+    type: application
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/tibco-developer-hub-1.16.7/tibco-developer-hub-1.16.7.tgz
+    version: 1.16.7
   - apiVersion: v2
     appVersion: 1.15.0
     created: "2026-03-10T10:29:24.821779164Z"
@@ -2514,6 +2961,18 @@ entries:
     version: 1.8.9
   tp-cp-proxy:
   - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:03.296723087Z"
+    description: A Helm chart for Control Plane Proxy
+    digest: a9413443b8fe466f54c44d95e6a411900b34a9770c5ce809eebcc67e49f279e6
+    keywords:
+    - cp-proxy
+    - data-plane
+    name: tp-cp-proxy
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/tp-cp-proxy-1.16.3/tp-cp-proxy-1.16.3.tgz
+    version: 1.16.3
+  - apiVersion: v2
     appVersion: 1.15.0
     created: "2026-02-27T10:38:01.220777188Z"
     description: A Helm chart for Control Plane Proxy
@@ -2680,6 +3139,18 @@ entries:
     version: 1.10.11
   tp-dp-hawk-console:
   - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:03.457310286Z"
+    description: A Helm chart for deploying the tp-dp-hawk-console service
+    digest: 90544774ede3052f50846b834f23f2fc358d66cbe3733c9924fb6e355fb17b90
+    keywords:
+    - hawk-console
+    - tp-msg-gateway
+    name: tp-dp-hawk-console
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/tp-dp-hawk-console-1.16.6/tp-dp-hawk-console-1.16.6.tgz
+    version: 1.16.6
+  - apiVersion: v2
     appVersion: 1.15.0
     created: "2026-02-27T10:38:01.41104723Z"
     description: A Helm chart for deploying the tp-dp-hawk-console service
@@ -2740,6 +3211,15 @@ entries:
     version: 1.13.0
   tp-dp-monitor-agent:
   - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-23T15:42:03.611125708Z"
+    description: A Helm chart for deploying the tp-dp-monitor-agent service
+    digest: 7739144c38d1a1be974cd05d84cac81b357b23381f02f46319caf70180c0b8fe
+    name: tp-dp-monitor-agent
+    urls:
+    - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/tp-dp-monitor-agent-1.16.230/tp-dp-monitor-agent-1.16.230.tgz
+    version: 1.16.230
+  - apiVersion: v2
     appVersion: 1.15.0
     created: "2026-02-27T10:38:01.578878176Z"
     description: A Helm chart for deploying the tp-dp-monitor-agent service
@@ -2775,4 +3255,4 @@ entries:
     urls:
     - https://github.com/KulbhushanBhalerao/tp-helm-charts/releases/download/tp-dp-monitor-agent-1.10.206/tp-dp-monitor-agent-1.10.206.tgz
     version: 1.10.206
-generated: "2026-03-10T10:29:24.821998292Z"
+generated: "2026-04-23T15:42:03.611430856Z"
